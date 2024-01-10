@@ -15,6 +15,13 @@
   width: 20%;
   height: 110vh;
 }
+.menu-side .links a {
+  text-decoration: none;
+  color: rgb(27, 26, 26);
+}
+.menu-side .links span {
+  padding: 10px 0;
+}
 .menu-side .links span {
   display: flex;
 }
@@ -23,13 +30,6 @@
 }
 .primary-links {
   margin-top: 20px;
-}
-.menu-side .links a {
-  text-decoration: none;
-  color: rgb(27, 26, 26);
-}
-.menu-side .links span {
-  padding: 10px 0;
 }
 .secondary-links {
   position: absolute;
@@ -41,6 +41,9 @@
 }
 .secondary-links span a h4 {
   padding: 10px 0;
+}
+#x-btn{
+  display:none;
 }
 .dashboard {
   height: 100vh;
@@ -198,7 +201,22 @@
 
 @media only screen and (max-width: 600px) {
   .menu-side{
-    display:none;
+    background: white;
+    position: fixed;
+    width: 70%;
+    left:-70% ;
+    transition: ease-in-out 0.5s;
+  }
+  #x-btn{
+    display: block;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .primary-links a{
+    padding: 150px 0;
   }
   .top-bar button{
     border: none;
@@ -215,11 +233,14 @@
   .top-bar{
     align-items: center;
   }
+  .secondary-links {
+  position: absolute;
+  bottom: 60vh;
+}
   .top-bar-icons img{
     display: none;
   }
   .first-row-dashboard{
-    width: 100%;
     display: block;
   }
   .savings{
@@ -249,6 +270,7 @@
     height: 100vh;
   }
   .balance{
+    margin-bottom: 10px;
     width: 100%;
     height: 25vh;
   }
