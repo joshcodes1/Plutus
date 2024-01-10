@@ -68,6 +68,9 @@
   display: flex;
   align-items: center;
 }
+ .fa-bell{
+    margin: 10px 15px;
+  }
 .main-dashboard {
   margin-top: 20px;
   display: flex;
@@ -140,6 +143,9 @@
   display: flex;
   justify-content: space-between;
 }
+.savings-head-percentage .percentage{
+  color: red;
+}
 .savings h2 {
   margin-top: 15px;
 }
@@ -159,7 +165,6 @@
 }
 .transaction.fa-burger{
   background-color: rgb(6, 97, 66);
-
 }
 .transaction{
   display: flex;
@@ -186,21 +191,39 @@
 .fa-bars{
   display: none;
 }
+.top-bar button{
+    border: none;
+    background: transparent;
+  }
+
 @media only screen and (max-width: 600px) {
   .menu-side{
     display:none;
   }
+  .top-bar button{
+    border: none;
+    background: transparent;
+  }
   .fa-bars{
+    border: none;
     display: block;
-  margin: 10px 15px;
+    margin: 10px 15px;
+  }
+  .fa-bell{
+    margin: 10px 15px;
+  }
+  .top-bar{
+    align-items: center;
   }
   .top-bar-icons img{
     display: none;
   }
   .first-row-dashboard{
     width: 100%;
+    display: block;
   }
   .savings{
+    margin-top: 5px;
     width: 100%;
   }
   .top-bar-icons h3{
@@ -227,5 +250,6 @@
   }
   .balance{
     width: 100%;
+    height: 25vh;
   }
 }
