@@ -48,11 +48,12 @@
 .dashboard {
   height: 100vh;
   width: 80%;
+  
 }
 .top-bar {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 5px 0;
   height: 10vh;
   width: 100%;
 }
@@ -72,10 +73,9 @@
   align-items: center;
 }
  .fa-bell{
-    margin: 10px 15px;
+    margin: 10px 0;
   }
 .main-dashboard {
-  margin-top: 20px;
   display: flex;
   height: 100vh;
 }
@@ -94,6 +94,7 @@
   margin-bottom: 5px;
 }
 .balance {
+  border-radius: 10px;
   background: rgba(25, 173, 199, 0.219);
   width: 55%;
   padding: 20px 10px;
@@ -137,8 +138,10 @@
   color: red;
 }
 .savings {
+  margin-bottom: 10px;
   background: rgba(25, 173, 199, 0.219);
   padding: 20px 10px;
+  border-radius: 10px;
   width: 45%;
   height:40vh;
 }
@@ -200,6 +203,9 @@
   }
 
 @media only screen and (max-width: 600px) {
+  .container{
+    margin: 0 10px;
+  }
   .menu-side{
     background: white;
     position: fixed;
@@ -225,10 +231,10 @@
   .fa-bars{
     border: none;
     display: block;
-    margin: 10px 15px;
+    margin: 10px 0;
   }
   .fa-bell{
-    margin: 10px 15px;
+    margin: 10px 0px;
   }
   .top-bar{
     align-items: center;
