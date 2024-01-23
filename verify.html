@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./verify.css">
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
+    <div class="containers">
       <div class="verify">
         <div class="verify-image-text">
             <div class="image-text-content">
@@ -26,30 +28,59 @@
                 <h4>Online Banking</h4>
             </div>
 
-            <div class="login-input">
-                
-                <div class="main-input">
-                    <h3 class="header">Log in</h3>
-                    <br>
-                        <label for="">Account number</label>
-                        <input type="text" name="" id="">
-                    <br>
-                    <br>
-                    <br>
-                        <label for="">Password</label>
-                        <input type="password" name="" id="">
-                    <br>
-                    <br>
-                    <br>
-                    <form action="./dashboard.html">
-                        <input type="submit" name="" value="Verify" id="verify-btn">
-                        <a href="">Forgot your password?</a>
-                    </form>
+            <div class="container">
+              <header>
+                <i class="bx bxs-check-shield"></i>
+              </header>
+              <h4>Enter OTP Code</h4>
+              <br>
+              <form action="./dashboard.html">
+                <div class="input-field">
+                  <input type="number" />
+                  <input type="number" disabled />
+                  <input type="number" disabled />
+                  <input type="number" disabled />
                 </div>
-                
+                <button>Verify OTP</button>
+              </form>
             </div>
         </div>
       </div>
     </div>
+    <script>
+      const inputs = document.querySelectorAll("input"),
+       button = document.querySelector("button");
+     
+     inputs.forEach((input, index1) => {
+       input.addEventListener("keyup", (e) => {
+         const currentInput = input,
+           nextInput = input.nextElementSibling,
+           prevInput = input.previousElementSibling;
+         if (currentInput.value.length > 1) {
+           currentInput.value = "";
+           return;
+         }
+         if (nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "") {
+           nextInput.removeAttribute("disabled");
+           nextInput.focus();
+         }
+         if (e.key === "Backspace") {
+           inputs.forEach((input, index2) => {
+             if (index1 <= index2 && prevInput) {
+               input.setAttribute("disabled", true);
+               input.value = "";
+               prevInput.focus();
+             }
+           });
+         }
+         if (!inputs[3].disabled && inputs[3].value !== "") {
+           button.classList.add("active");
+           return;
+         }
+         button.classList.remove("active");
+       });
+     });
+     window.addEventListener("load", () => inputs[0].focus());
+         </script>
   </body>
 </html>

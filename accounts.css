@@ -6,19 +6,21 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #4070f4;
+  background: #4070f4; */
 }
 :where(.container, form, .input-field, header) {
-  display: flex;
+  text-align: center;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .container {
+  margin-left: 500px;
   background: #fff;
   padding: 30px 65px;
   border-radius: 12px;
@@ -78,4 +80,3 @@ form button.active {
 form button:hover {
   background: #0e4bf1;
 }
-Third, paste the following codes into your script.js file.
