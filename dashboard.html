@@ -45,7 +45,7 @@
             <br>
             <a href="">
               <span>
-                <i class="fa-solid fa-arrow-left-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 <h4>Transactions</h4>
               </span>
             </a>
@@ -152,7 +152,9 @@
 
             <div class="second-row-dashboard">
               <div class="statistics-savings">
-                <!-- Erwin your code goes here -->
+                <div>
+                  <canvas id="my-Chart"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -290,7 +292,7 @@
         navLinks[0].style.left = "-70%";
       });
 
-      const ctx = document.getElementById("myChart");
+      var ctx = document.getElementById("myChart");
 
       new Chart(ctx, {
         type: "bar",
@@ -325,6 +327,33 @@
           },
         },
       });
+
+
+      // doughnut chart
+
+      var ctx = document.getElementById("my-Chart");
+
+new Chart(ctx, {
+  type: "doughnut",
+  data: {
+    labels: [
+      "Income",
+      "Expenses",
+      "Savings",
+    ],
+    datasets: [
+      {
+        label: "Transaction Chart",
+        data: [70, 33, 27,],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    aspectRatio:2,
+
+  },
+});
     </script>
   </body>
 </html>

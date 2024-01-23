@@ -305,4 +305,10 @@
   .mobile-user-profile{
     display: flex;
   }
+  .statistics-savings {
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    background-color: #201d1d;
+  }
 }
