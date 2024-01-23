@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./verify.css">
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="verify-img-side">
-            <img src="./images/mylogo.png" alt="">
-            <div class="verify-img-text">
-                <h1>Plutus is personal finance, made simple</h1>
-                <h4>All your accounts cards savings and investment in one place</h4>
-            </div>
-        </div>
-
-        <div class="verify-side">
-            <div class="logo">
-                <h2>Plutus</h2>
-                <h6>Online Bank</h6>
-            </div>
-
-            <div class="main-verify">
-                <h2>Verify your identity</h2>
-                <h3>we just sent a text message to the number +234** *** *78 <br> Please enter the code in order to continue.</h3>
-                <div class="main-input">
-                    <input type="phone" name="" id="">
-                    <input type="phone" name="" id="">
-                    <input type="phone" name="" id="">
-                    <input type="phone" name="" id="">
-                    
+      <div class="verify">
+        <div class="verify-image-text">
+            <div class="image-text-content">
+                <img src="./images/20240120_195348.png" alt="" />
+                <div class="text">
+                  <h2>Plutus is personal finance, made simple</h2>
+                  <h4>All your accounts, cards, savings, and investment in one place</h4>
                 </div>
-                <form action="">
-                    <input id="verify-btn" type="submit" value="Verify">
-
-                </form>
-                    <br>
-                    <a href="">Forget your password?</a>
             </div>
         </div>
+        <div class="main-verify">
+            <div class="logo">
+                <h3>Plutus</h3>
+                <h4>Online Banking</h4>
+            </div>
+
+            <div class="login-input">
+                
+                <div class="main-input">
+                    <h3 class="header">Log in</h3>
+                    <br>
+                        <label for="">Account number</label>
+                        <input type="text" name="" id="">
+                    <br>
+                    <br>
+                    <br>
+                        <label for="">Password</label>
+                        <input type="password" name="" id="">
+                    <br>
+                    <br>
+                    <br>
+                    <form action="./dashboard.html">
+                        <input type="submit" name="" value="Verify" id="verify-btn">
+                        <a href="">Forgot your password?</a>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
