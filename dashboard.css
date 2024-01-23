@@ -307,8 +307,8 @@
   }
   .statistics-savings {
     width: 100%;
-    height: max-content;
-    padding-bottom: 20px;
+    height: 30vh;
+    padding: 20px 0;
     background-color: #201d1d;
   }
 }
